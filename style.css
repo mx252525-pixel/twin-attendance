@@ -1,0 +1,42 @@
+:root{color-scheme:light;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;color:#1d1d1f;background:#f5f5f7;font-synthesis:none;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+body{margin:0;min-width:280px}
+button,a{-webkit-tap-highlight-color:transparent}
+button{font:inherit}
+[hidden]{display:none!important}
+.shell{min-height:100vh;min-height:100svh;max-width:460px;margin:auto;padding:calc(28px + env(safe-area-inset-top)) max(28px,env(safe-area-inset-right)) calc(20px + env(safe-area-inset-bottom)) max(28px,env(safe-area-inset-left));display:flex;flex-direction:column}
+main{flex:1;display:flex;flex-direction:column;justify-content:center;padding:48px 0 64px}
+.intro{text-align:center;animation:appear .7s cubic-bezier(.22,1,.36,1) both}
+.symbol{display:block;width:144px;height:75px;margin:0 auto 18px}
+.brand{font-size:17px;letter-spacing:-.6px;font-weight:650;margin:0 0 48px;color:#16264c}
+.brand span{font-weight:400;color:#8c8d94}
+h1{font-size:34px;font-weight:700;line-height:1.2;letter-spacing:-1.5px;margin:0 0 12px}
+.description{color:#85858d;font-size:16px;line-height:1.6;letter-spacing:-.35px;margin:0}
+.actions{margin-top:64px;animation:appear .7s .1s cubic-bezier(.22,1,.36,1) both}
+.button{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:52px;border:0;border-radius:999px;padding:14px 22px;text-decoration:none;font-size:16px;line-height:1.4;font-weight:600;letter-spacing:-.25px;cursor:pointer;transition:transform .15s,background .15s}
+.button:active{transform:scale(.98)}
+.primary{color:white;background:#16264c}
+.primary:hover{background:#263a64}
+.primary span{font-size:19px;font-weight:400;opacity:.6}
+.secondary{margin-top:12px;background:#e8e9ee;color:#344265}
+.secondary:hover{background:#dfe1e9}
+:focus-visible{outline:3px solid #78be38;outline-offset:4px}
+.caption{text-align:center;font-size:12px;line-height:1.7;color:#93939c;letter-spacing:-.15px;margin:20px 0 0}
+.status{color:#7c7e88;font-size:13px;line-height:1.5;text-align:center;min-height:0;margin:0}
+.status:not(:empty){margin-bottom:16px}
+footer{text-align:center;font-size:10px;letter-spacing:2.5px;color:#b1b2bb;font-weight:600}
+dialog{border:0;border-radius:28px;width:calc(100% - 32px);max-width:420px;padding:26px;color:#1d1d1f;background:#fff;box-shadow:0 24px 90px #16264c22;max-height:calc(100svh - 48px);overflow:auto}
+dialog::backdrop{background:#11182755;backdrop-filter:blur(8px)}
+.dialog-header{display:flex;align-items:center;justify-content:space-between;gap:10px}
+h2{font-size:23px;line-height:1.3;letter-spacing:-.8px;margin:0}
+.close{border:0;background:#f0f0f3;color:#737580;font-size:25px;width:36px;height:36px;line-height:1;border-radius:50%;cursor:pointer;flex:none}
+.guide-lede{color:#8b8b94;font-size:14px;line-height:1.6;margin:10px 0 26px}
+section+section{border-top:1px solid #eeeef1;margin-top:22px;padding-top:22px}
+h3{font-size:15px;letter-spacing:-.3px;margin:0 0 12px;color:#16264c}
+ol{margin:0;padding-left:20px;color:#6f7079;font-size:14px;line-height:1.8}
+li+li{margin-top:7px}
+strong{font-weight:600;color:#40434e}
+.guide-note{font-size:12px;line-height:1.7;color:#92939c;margin:24px 0}
+@keyframes appear{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+@media(max-height:650px){main{padding:24px 0 36px}.brand{margin-bottom:28px}.actions{margin-top:36px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
