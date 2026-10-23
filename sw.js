@@ -1,8 +1,8 @@
 'use strict';
 // Deliberately limited to the launcher shell; no cross-origin requests are handled.
 const CACHE_PREFIX = 'twin-attendance-launcher:' + self.registration.scope + ':';
-const CACHE_NAME = CACHE_PREFIX + 'v1';
-const SHELL = ['index.html', 'style.css', 'app.js', 'logo.svg', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'maskable-512.png', 'apple-touch-icon.png'].map(path => new URL(path, self.registration.scope).href);
+const CACHE_NAME = CACHE_PREFIX + 'v2';
+const SHELL = ['index.html', 'install.html', 'style.css', 'app.js', 'logo.svg', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'maskable-512.png', 'apple-touch-icon.png'].map(path => new URL(path, self.registration.scope).href);
 const INDEX = new URL('index.html', self.registration.scope).href;
 
 self.addEventListener('install', event => {
